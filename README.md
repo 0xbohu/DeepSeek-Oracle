@@ -1,6 +1,6 @@
 # DeepSeek-Oracle
 
-基于紫微斗数的命理分析系统，使用deepseek等大语言模型进行解读。
+基于紫微斗数的命理分析系统，使用 deepseek 等大语言模型进行解读。
 
 ## 新闻
 
@@ -17,40 +17,44 @@ v0.0.1 正值情人节发布姻缘版~
 - Markdown 格式导出
 
 ## 界面展示
-### bilibili视频展示：
-[【情人节到了，来用DeepSeek算算命里的那个ta】](https://www.bilibili.com/video/BV1M4KPeYEUd/?share_source=copy_web&amp;vd_source=61a460664b149ef3561e7fc98974fc81)
+
+### bilibili 视频展示：
+
+[【情人节到了，来用 DeepSeek 算算命里的那个 ta】](https://www.bilibili.com/video/BV1M4KPeYEUd/?share_source=copy_web&vd_source=61a460664b149ef3561e7fc98974fc81)
 
 1. 进入系统后填写八字即可查询自己的姻缘相关分析。
-![alt text](./static/p1.png)
+   ![alt text](./static/p1.png)
 
 2. 点击查询稍等一会就能得到结果。
-![alt text](./static/p2.png)
+   ![alt text](./static/p2.png)
 
 3. 可以获取到的内容有生成八字及紫薇命盘。
-![alt text](./static/p3.png)
+   ![alt text](./static/p3.png)
 
 4. 婚姻道路分析。
-![alt text](./static/p4.png)
+   ![alt text](./static/p4.png)
 
 5. 与伴侣的困难和挑战。
-![alt text](./static/p5.png)
+   ![alt text](./static/p5.png)
 
 6. 另一半的性格。
-![alt text](./static/p6.png)
+   ![alt text](./static/p6.png)
 
 7. 查阅整体推理耗时情况。
-![alt text](./static/p7.jpg)
+   ![alt text](./static/p7.jpg)
 
-8. 如果满意可以下载为md备用。
-![alt text](./static/p8.png)
+8. 如果满意可以下载为 md 备用。
+   ![alt text](./static/p8.png)
 
 ## 环境要求
 
 ### Node.js 环境
+
 - Node.js 16+
 - pnpm
 
 ### Python 环境
+
 - Python 3.8+
 - pip
 
@@ -58,19 +62,14 @@ v0.0.1 正值情人节发布姻缘版~
 
 1. 安装 Node.js 依赖
 
-
-
 ```bash
 pnpm add -S iztro express
 ```
 
-
-
-
 2. 安装 Python 依赖
 
-
 ### 主要 Python 依赖
+
 - Flask: Web 框架
 - Flask-CORS: 处理跨域请求
 - python-dotenv: 环境变量管理
@@ -81,6 +80,7 @@ pnpm add -S iztro express
 ## 配置说明
 
 ### 环境变量配置
+
 在项目根目录创建 `.env` 文件：
 
 ```bash
@@ -88,10 +88,10 @@ DEEPSEEK_API_KEY=your-api-key-here
 DEEPSEEK_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 ```
 
-注意：如果使用火山api请在llmana/deepseek_huoshan_api.py 修改推理接入点 
-
+注意：如果使用火山 api 请在 llmana/deepseek_huoshan_api.py 修改推理接入点
 
 ### 数据库配置
+
 项目使用 SQLite 数据库，首次运行时会自动创建 `data.db` 文件。
 
 ## 启动服务
@@ -108,16 +108,11 @@ node src/index.js
    python app.py
    ```
 
-   
-
 ## 访问系统
 
 打开浏览器访问：
 
 http://localhost:5000
-
-
-
 
 ## 项目结构
 
@@ -151,6 +146,7 @@ python_iztro/
 ## 分析结果
 
 分析结果将保存在 `fortune_result.md` 文件中，包含：
+
 - 基本信息（日期、时区、性别、历法）
 - 命盘描述
 - 各项分析结果
@@ -159,6 +155,7 @@ python_iztro/
 ## 大语言模型支持
 
 支持多种大语言模型接口：
+
 - DeepSeek
 - GLM
 - QwenMax
